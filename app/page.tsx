@@ -28,40 +28,40 @@ const capabilities = [
 ];
 
 export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 space-y-5 bg-slate-900">
-        <small className="border border-emerald-500 rounded-full px-2 py-1 text-[12px] text-light text-slate-100">
-            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-            Available for new opportunities
-        </small>
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-100">
-            Hi, I&apos;m{" "}
-            <span className="bg-linear-to-r from-indigo-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
-            Dennis Mbithi
-          </span>
-        </h1>
-        <p className="text-xl md:text-2xl font-bold tracking-tight text-slate-200">
-            Full-Stack Software Engineer
-        </p>
+    return (
+        <div className="w-full min-h-screen bg-slate-900 pt-20">
+            <div className="max-w-6xl flex flex-col items-center justify-center min-h-screen py-2 space-y-5 bg-slate-900 mx-auto">
+                <small className="border border-emerald-500 rounded-full px-2 py-1 text-[12px] text-light text-slate-100">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    Available for new opportunities
+                </small>
+                <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-100">
+                    Hi, I&apos;m{" "}
+                    <span className="bg-linear-to-r from-indigo-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">Dennis Mbithi</span>
+                </h1>
+                <p className="text-xl md:text-2xl font-bold tracking-tight text-slate-200">
+                    Full-Stack Software Engineer
+                </p>
 
-        <p className="max-w-2xl mx-auto text-base md:text-lg text-slate-400 leading-relaxed">
-            I design and build high-performance, visually stunning web applications with robust backends and clean architectures. Specializing in modern technologies like React, Next.js, and Node.js.
-        </p>
-        <ul className="my-5 flex items-center justify-center gap-x-4">
-            <Link href="/projects" className="bg-slate-100 rounded py-2 px-8 text-slate-900">Review my work</Link>
-            <Link href="/contacts" className="border border-slate-100 rounded py-2 px-8 text-slate-100">Get in Touch</Link>
-        </ul>
+                <p className="max-w-2xl mx-auto text-base md:text-lg text-slate-400 leading-relaxed">
+                    I design and build high-performance, visually stunning web applications with robust backends and clean architectures. Specializing in modern technologies like React, Next.js, and Node.js.
+                </p>
+                <ul className="my-5 flex items-center justify-center gap-x-4">
+                    <Link href="/projects" className="bg-slate-100 rounded py-2 px-8 text-slate-900">Review my work</Link>
+                    <Link href="/contacts" className="border border-slate-100 rounded py-2 px-8 text-slate-100">Get in Touch</Link>
+                </ul>
 
-        <div className="flex max-w-2/3 gap-5 py-10">
-            { capabilities.map((capability, capabilityIndex) => (
-                <div key={capabilityIndex} className="flex flex-col space-y-2.5 rounded-2xl border border-slate-200 p-5">
-                    <span className="text-2xl text-slate-100">{ capability.icon }</span>
-                    <h3 className="text-2xl capitalize text-slate-100 leading-2 font-mono font-semibold my-4">{capability.title}</h3>
-                    <p className="text-slate-500 text-sm text-light">{ capability.description }</p>
+                <div className="flex gap-5 py-10">
+                    {capabilities.map((capability, capabilityIndex) => (
+                        <div key={capabilityIndex} className="flex flex-col space-y-2.5 rounded-2xl border border-slate-200 p-5">
+                            <span className="text-xl md:text-2xl text-slate-100">{capability.icon}</span>
+                            <h3 className="text-2xl capitalize text-slate-100 leading-2 font-mono font-semibold my-4">{capability.title}</h3>
+                            <p className="text-slate-500 text-sm text-light">{capability.description}</p>
+                        </div>
+                    ))
+                    }
                 </div>
-                ))
-            }
+            </div>
         </div>
-    </div>
-  );
+    );
 }
